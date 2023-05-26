@@ -1,0 +1,29 @@
+.checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    &:checked {
+        background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMTczLjg5OCA0MzkuNDA0LTE2Ni40LTE2Ni40Yy05Ljk5Ny05Ljk5Ny05Ljk5Ny0yNi4yMDYgMC0zNi4yMDRsMzYuMjAzLTM2LjIwNGM5Ljk5Ny05Ljk5OCAyNi4yMDctOS45OTggMzYuMjA0IDBMMTkyIDMxMi42OSA0MzIuMDk1IDcyLjU5NmM5Ljk5Ny05Ljk5NyAyNi4yMDctOS45OTcgMzYuMjA0IDBsMzYuMjAzIDM2LjIwNGM5Ljk5NyA5Ljk5NyA5Ljk5NyAyNi4yMDYgMCAzNi4yMDRsLTI5NC40IDI5NC40MDFjLTkuOTk4IDkuOTk3LTI2LjIwNyA5Ljk5Ny0zNi4yMDQtLjAwMXoiIGZpbGw9IiNmZmZmZmYiIGNsYXNzPSJmaWxsLTAwMDAwMCI+PC9wYXRoPjwvc3ZnPg=='),
+            linear-gradient(315deg, rgb(192, 56, 255) 0%, rgb(83, 175, 255) 100%);
+        background-size: 0.7rem, 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+
+        &:hover {
+            border: 2px solid #ddd;
+        }
+    }
+
+    &:hover:not(:checked) {
+        background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)) padding-box,
+            linear-gradient(315deg, rgb(192, 56, 255), rgb(83, 175, 255)) border-box;
+        border: 2px solid transparent;
+    }
+}

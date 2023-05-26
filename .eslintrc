@@ -1,0 +1,33 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended",
+        "react-app/jest",
+        "prettier"
+    ],
+    "plugins": [
+        "react",
+        "prettier"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    "rules": {
+        "import/prefer-default-export": "off",
+        "prettier/prettier": "error",
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "func-names": "off",
+        "no-process-exit": "off",
+        "object-shorthand": "off",
+        "class-methods-use-this": "off",
+        "react/jsx-filename-extension": "off",
+        "react/react-in-jsx-scope": "off"
+    }
+}

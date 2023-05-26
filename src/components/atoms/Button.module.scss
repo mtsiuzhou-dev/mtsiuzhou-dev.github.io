@@ -1,0 +1,16 @@
+.button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+
+    &:hover,
+    &[aria-pressed='true'] {
+        color: rgb(0, 0, 0);
+    }
+
+    &[aria-pressed='true'] {
+        color: rgb(0, 136, 255);
+    }
+}

@@ -1,0 +1,56 @@
+.editBtn {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMTAxODIwO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iTGF5ZXIgNDIiIGlkPSJMYXllcl80MiI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMiwyOWExLDEsMCwwLDEtMS0xLjExbC43Ny03YTEsMSwwLDAsMSwuMjktLjU5TDE4LjQyLDMuOTRhMy4yLDMuMiwwLDAsMSw0LjUzLDBsMy4xMSwzLjExYTMuMiwzLjIsMCwwLDEsMCw0LjUzTDkuNzEsMjcuOTNhMSwxLDAsMCwxLS41OS4yOWwtNywuNzdabTctMS43OEg5Wk0zLjczLDIxLjQ1bC0uNiw1LjQyLDUuNDItLjYsMTYuMS0xNi4xYTEuMiwxLjIsMCwwLDAsMC0xLjdMMjEuNTMsNS4zNWExLjIsMS4yLDAsMCwwLTEuNywwWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIzLDE0LjIxYTEsMSwwLDAsMS0uNzEtLjI5TDE2LjA4LDcuNjlBMSwxLDAsMCwxLDE3LjUsNi4yN2w2LjIzLDYuMjNhMSwxLDAsMCwxLDAsMS40MkExLDEsMCwwLDEsMjMsMTQuMjFaIi8+PHJlY3QgY2xhc3M9ImNscy0xIiBoZWlnaHQ9IjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjMxIDE0LjEzKSByb3RhdGUoLTQ1KSIgd2lkdGg9IjExLjAxIiB4PSI3LjM5IiB5PSIxNi4xIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzAsMjlIMTRhMSwxLDAsMCwxLDAtMkgzMGExLDEsMCwwLDEsMCwyWiIvPjwvZz48L3N2Zz4=') !important;
+}
+
+.deleteBtn {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGlkPSJjcm9zcyI+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iNyIgeDI9IjI1IiB5MT0iNyIgeTI9IjI1Ii8+PGxpbmUgY2xhc3M9ImNscy0xIiB4MT0iNyIgeDI9IjI1IiB5MT0iMjUiIHkyPSI3Ii8+PC9nPjwvc3ZnPg==');
+}
+
+.todoContainer {
+    display: flex;
+    height: 3rem;
+    padding: 0 1rem;
+    margin: 0;
+    align-items: center;
+
+    label {
+        cursor: pointer;
+        flex: 1;
+        margin-left: 1rem;
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    &:hover Button {
+        opacity: 0.2;
+    }
+}
+
+.todoActions {
+    Button {
+        margin-left: 1rem;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        color: transparent !important;
+        height: 1.2rem;
+        width: 1.2rem;
+        opacity: 0;
+        outline: 0;
+
+        &:hover {
+            opacity: 1 !important;
+        }
+    }
+}
+
+.crossout {
+    text-decoration: line-through;
+    color: rgb(180, 180, 180);
+}
+
+.hidden {
+    visibility: hidden;
+}
