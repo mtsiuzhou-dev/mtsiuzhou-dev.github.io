@@ -31,10 +31,11 @@ function Task({ id, name, isCompleted }) {
   function handleSubmit(e) {
     e.preventDefault();
     setIsEditing(false);
-    if (!newName.trim()) {
+    const trimmedNewName = newName.trim();
+    if (!trimmedNewName) {
       return;
     }
-    dispatch(editTask({ id, newName }));
+    dispatch(editTask({ id, newName: trimmedNewName }));
     setNewName('');
   }
 

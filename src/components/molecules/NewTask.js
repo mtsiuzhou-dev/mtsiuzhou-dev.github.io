@@ -14,12 +14,13 @@ function NewTask() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!name.trim()) {
+    const trimmedName = name.trim();
+    if (!trimmedName.trim()) {
       return;
     }
 
     dispatch(
-      addTask({ id: `todo-${nanoid()}`, name: name, isCompleted: false })
+      addTask({ id: `todo-${nanoid()}`, name: trimmedName, isCompleted: false })
     );
 
     setName('');
