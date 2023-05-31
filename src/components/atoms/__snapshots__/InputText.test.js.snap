@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputText: renders correctly 1`] = `
+<input
+  autoComplete="off"
+  className="inputText"
+  id="InputTextId"
+  maxLength="75"
+  onBlur={null}
+  onChange={[MockFunction]}
+  placeholder=""
+  type="text"
+  value=""
+/>
+`;

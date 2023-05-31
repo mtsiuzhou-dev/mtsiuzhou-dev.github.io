@@ -47,6 +47,7 @@
     "eslint-plugin-react": "^7.23.1",
     "gh-pages": "^5.0.0",
     "jest-watch-typeahead": "^0.6.5",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^18.2.0"
   }
 }

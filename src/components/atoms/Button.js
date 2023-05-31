@@ -12,7 +12,7 @@ const Button = ({
   <button
     aria-pressed={isPressed}
     type={isSubmit ? 'submit' : 'button'}
-    className={`${style.button} ${className}`}
+    className={`${style.button} ${className || ''}`.trim()}
     onClick={onClick}
     ref={innerRef}
   >

@@ -3,9 +3,9 @@ import style from './InputText.module.scss';
 
 const InputText = ({
   id,
-  value,
-  placeholder = null,
-  onChange = null,
+  value = '',
+  placeholder = '',
+  onChange,
   onBlur = null,
   innerRef = null,
 }) => (
@@ -23,16 +23,16 @@ const InputText = ({
   />
 );
 InputText.defaultProps = {
-  onChange: null,
+  value: '',
+  placeholder: '',
   onBlur: null,
   innerRef: null,
-  placeholder: null,
 };
 InputText.propTypes = {
   id: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   placeholder: PropTypes.string,
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func,
   innerRef: PropTypes.oneOfType([
     PropTypes.func,
