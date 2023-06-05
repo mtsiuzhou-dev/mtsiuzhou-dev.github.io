@@ -4,6 +4,9 @@ import { createSlice } from '@reduxjs/toolkit';
 import { FilterMap, FilterNames } from '../constants/Filters';
 import Storage from '../data/Storage';
 
+const getTasksByFilter = state =>
+  state.taskList.filter(FilterMap[state.filterName]);
+
 const initialState = Storage.load() || {
   filterName: FilterMap.All.name,
   taskList: [],
@@ -48,15 +51,21 @@ const TasksSlice = createSlice({
       ) {
         return;
       }
-      const [removedTask] = state.taskList.splice(source.index, 1);
-      state.taskList.splice(destination.index, 0, removedTask);
+      const filteredTasks = getTasksByFilter(state);
+      const sourceIndex = state.taskList.findIndex(
+        task => task.id === filteredTasks[source.index].id
+      );
+      const destIndex = state.taskList.findIndex(
+        task => task.id === filteredTasks[destination.index].id
+      );
+      const [movedTask] = state.taskList.splice(sourceIndex, 1);
+      state.taskList.splice(destIndex, 0, movedTask);
     },
   },
 });
 
 const selectCurrentFilter = state => state.todo.filterName;
-const selectTasksByFilter = state =>
-  state.todo.taskList.filter(FilterMap[state.todo.filterName]);
+const selectTasksByFilter = state => getTasksByFilter(state.todo);
 const selectActiveTasksLength = state =>
   state.todo.taskList.filter(FilterMap.Active).length;
 
